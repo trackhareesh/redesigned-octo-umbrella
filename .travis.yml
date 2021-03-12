@@ -9,6 +9,9 @@ language: java
 #script:
 #  - ./mvnw clean package
 
+after_success:
+  sh aftertravissuccess.sh
+
 deploy:
   skip_cleanup: true
   provider: elasticbeanstalk
