@@ -17,5 +17,10 @@ public class DockerTestApplication {
 	public String home() {
 		return "Hello World!!";
 	}
+	
+	@RequestMapping("/feature01")
+	public String testFeature01() {
+		return "This is a test feature!!";
+	}
 
 }
