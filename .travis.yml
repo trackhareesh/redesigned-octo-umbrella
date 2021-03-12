@@ -20,7 +20,7 @@ deploy:
   env: "Dockerjava-env"
   bucket_name: "elasticbeanstalk-us-east-2-856551873424"
   bucket_path: "docker-java"
-  zip_file: "target/dockertest-0.0.1-SNAPSHOT.jar"
+  zip_file: "app.zip"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
