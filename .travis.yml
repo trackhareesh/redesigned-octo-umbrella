@@ -9,15 +9,16 @@ services:
 script:
   - ./mvnw clean package
 
-#deploy:
-#  skip_cleanup: true
-#  provider: elasticbeanstalk
-#  region: "us-east-2"
-#  app: "docker"
-#  env: "Docker-env"
-#  bucket_name: "elasticbeanstalk-us-east-2-856551873424"
-#  bucket_path: "docker"
-#  on:
-#    branch: master
-#  access_key_id: $AWS_ACCESS_KEY
-#  secret_access_key: $AWS_SECRET_KEY
+deploy:
+  skip_cleanup: true
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-java"
+  env: "Dockerjava-env"
+  bucket_name: "elasticbeanstalk-us-east-2-856551873424"
+  bucket_path: "docker-java"
+  zip_file: "target/dockertest-0.0.1-SNAPSHOT.jar"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
